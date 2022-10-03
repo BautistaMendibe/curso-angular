@@ -1,4 +1,11 @@
 <p>Nombre: {{nombre}}</p>
 <p>Apellido: {{apellido}}</p>
 <p>Edad: {{edad >= 18 ? "Mayor de edad" : "Menor de edad"}}</p>
-<p>Empresa: {{empresa}}</p>
+<p>Empresa: {{empresa.value}}</p>
+
+Empresa: <input type="text" #empresa>
+
+<br>
+<br>
+
+<input type="button" value="Ok" (click) = "llamarEmpresa(empresa.value)">
